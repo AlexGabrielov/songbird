@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootswatch/dist/darkly/bootstrap.min.css';
 import './App.css';
 import Answers from '../src/components/answers/Answers';
 import BirdInfo from '../src/components/bird-info/BirdInfo';
@@ -13,6 +14,9 @@ function App() {
       <CurrentQuestion />
       <Answers />
       <BirdInfo />
+      <button type="button" className="btn btn-primary">
+        Next
+      </button>
     </div>
   );
 }

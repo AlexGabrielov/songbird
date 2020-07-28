@@ -1,0 +1,10 @@
+.app-container {
+  padding: 50px 10%;
+}
+.logo {
+  background-image: url(songbird.svg);
+  width: 200px;
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

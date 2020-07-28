@@ -4,7 +4,7 @@ const Header = (props) => {
   return (
     <header className="header-wrapper">
     <div className="logo-and-score-wrapper">
-      <div className="logo">лого</div>
+      <div className="logo" />
       <div className='score'>1/10</div>
     </div>
     <div className="category-wrapper">
