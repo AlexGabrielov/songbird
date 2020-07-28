@@ -7,14 +7,26 @@ const Header = (props) => {
       <div className="logo" />
       <div className='score'>1/10</div>
     </div>
-    <div className="category-wrapper">
-      <div className="category">Разминка</div>
-      <div className="category">Воробьиные</div>
-      <div className="category">Лесные птицы</div>
-      <div className="category">Певчие птицы</div>
-      <div className="category">Хищные птицы</div>
-      <div className="category">Морские птицы</div>
-    </div>
+    <ul className="pagination">
+      <li className="page-item">
+        <a href="/#" className='page-link'>Разминка</a>
+      </li>
+      <li className="page-item">
+        <a href="/#" className='page-link'>Воробьиные</a>
+      </li>
+      <li className="page-item">
+        <a href="/#" className='page-link'> Лесные птицы</a>
+      </li>
+      <li className="page-item">
+        <a href="/#" className='page-link'>Певчие птицы</a>
+      </li>
+      <li className="page-item">
+        <a href="/#" className='page-link'> Хищные птицы</a>
+      </li>
+      <li className="page-item">
+        <a href="/#" className='page-link'> Морские птицы</a>
+      </li>
+    </ul>
     </header>
   )
 }

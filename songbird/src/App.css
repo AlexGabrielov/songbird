@@ -8,3 +8,16 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+.logo-and-score-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.pagination {
+  margin-top: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.page-item {
+  flex: auto;
+  text-align: center;
+}
