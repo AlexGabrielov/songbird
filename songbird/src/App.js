@@ -12,8 +12,10 @@ function App() {
     <div className="app-container">
       <Header />
       <CurrentQuestion />
-      <Answers />
-      <BirdInfo />
+      <div className='answers-and-birdinfo-wrapper'>
+        <Answers />
+        <BirdInfo />
+      </div>
       <button type="button" className="btn btn-primary">
         Next
       </button>

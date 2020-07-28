@@ -21,3 +21,20 @@
   flex: auto;
   text-align: center;
 }
+.question-wrapper {
+  display: flex;
+}
+.group-name-and-player {
+  width: 80%;
+}
+.bird-img-question {
+  width: 20%;
+}
+.answers-and-birdinfo-wrapper {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.answers-wrapper, .bird-info-wrapper {
+  flex: 0 0 50%;
+} 
