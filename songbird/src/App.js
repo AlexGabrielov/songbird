@@ -7,14 +7,18 @@ import CurrentQuestion from '../src/components/current-question/CurrentQuestion'
 import Header from '../src/components/header/Header';
 import birdsData from '../src/birds';
 
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+
 function App() {
   const [categoryIndex, setCategoryIndex] = useState(0);
-  // console.log(birdsData)
+  const [currentBirdIndex, setCurrentBirdIndex] = useState(getRandomInt(6));
+
+  console.log(currentBirdIndex);
 
   return (
     <div className="app-container">
       <Header />
-      <CurrentQuestion />
+      <CurrentQuestion categoryIndex={categoryIndex} currentBirdIndex={currentBirdIndex} />
       <div className="answers-and-birdinfo-wrapper">
         <Answers categoryIndex={categoryIndex} />
         <BirdInfo />

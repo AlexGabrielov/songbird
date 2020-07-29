@@ -18,7 +18,7 @@ const BirdInfo = (props) => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Repellat, sed! Non qui assumenda delectus consectetur aperiam explicabo ad praesentium illum ipsam
         facere vel consequuntur labore, ab asperiores neque! Blanditiis, aspernatur!
-       </div>
+      </div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ const Answers = ({categoryIndex}) => {
   return (
     <div className="answers-wrapper">
     <ul>
-     {birdsData[categoryIndex].map(({name}) => <li>{name}</li>)}
+      {birdsData[categoryIndex].map(({name}) => <li key={name}>{name}</li>)}
     </ul>
     </div>
   )
