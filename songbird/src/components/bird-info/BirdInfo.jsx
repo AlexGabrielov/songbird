@@ -1,4 +1,5 @@
 import React from 'react';
+import birdsData from '../../birds';
 
 const BirdInfo = (props) => {
   return (
