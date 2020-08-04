@@ -13,13 +13,18 @@ function App() {
   const [categoryIndex, setCategoryIndex] = useState(0);
   const [currentBirdIndex, setCurrentBirdIndex] = useState(getRandomInt(6));
   const [score, setScore] = useState(0);
+  const [guessed, setGuessed] = useState(false);
 
   console.log(currentBirdIndex);
 
   return (
     <div className="app-container">
-      <Header score={score} />
-      <CurrentQuestion categoryIndex={categoryIndex} currentBirdIndex={currentBirdIndex} />
+      <Header score={score} categoryIndex={categoryIndex} />
+      <CurrentQuestion
+        categoryIndex={categoryIndex}
+        currentBirdIndex={currentBirdIndex}
+        guessed={guessed}
+      />
       <div className="answers-and-birdinfo-wrapper">
         <Answers categoryIndex={categoryIndex} />
         <BirdInfo />

@@ -2,7 +2,7 @@ import React from 'react';
 
 const categories = ['Разминка', 'Воробьиные', 'Лесные птицы', 'Певчие птицы', 'Хищные птицы', 'Морские птицы'];
 
-const Header = ({score}) => {
+const Header = ({score, categoryIndex}) => {
   return (
     <header className="header-wrapper">
     <div className="logo-and-score-wrapper">
@@ -12,8 +12,8 @@ const Header = ({score}) => {
     <ul className="pagination">
       {categories.map((category, index) => {
         return (
-        <li className="page-item">
-        <a href="/#" className='page-link'>{category}</a>
+        <li key={category} className={`page-item ${ index === categoryIndex ? 'active' : 'disabled'}`}>
+          <a href="/#" className='page-link'>{category}</a>
         </li>
         )
       })}
