@@ -12,12 +12,13 @@ const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 function App() {
   const [categoryIndex, setCategoryIndex] = useState(0);
   const [currentBirdIndex, setCurrentBirdIndex] = useState(getRandomInt(6));
+  const [score, setScore] = useState(0);
 
   console.log(currentBirdIndex);
 
   return (
     <div className="app-container">
-      <Header />
+      <Header score={score} />
       <CurrentQuestion categoryIndex={categoryIndex} currentBirdIndex={currentBirdIndex} />
       <div className="answers-and-birdinfo-wrapper">
         <Answers categoryIndex={categoryIndex} />
