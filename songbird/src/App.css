@@ -31,10 +31,6 @@
   padding: 10px;
   /* width: 80%; */
 }
-.bird-img-question {
-  flex: 0 0 20%;
-  padding: 10px;
-}
 .answers-and-birdinfo-wrapper {
   margin-top: 20px;
   display: flex;
@@ -44,12 +40,11 @@
 .bird-info-wrapper {
   flex: 0 0 50%;
 }
-.bird-img-question {
+img {
   width: 200px;
   height: 155px;
   border-radius: 10px;
   margin: 0;
 }
 .bird-name-and-player-wrapper {
-  
 }

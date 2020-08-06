@@ -14,8 +14,9 @@ function App() {
   const [currentBirdIndex, setCurrentBirdIndex] = useState(getRandomInt(6));
   const [score, setScore] = useState(0);
   const [guessed, setGuessed] = useState(false);
+  const [currentAnswerIndex, setCurrentAnswerIndex] = useState(null);
 
-  console.log(currentBirdIndex);
+  console.log(currentAnswerIndex);
 
   return (
     <div className="app-container">
@@ -26,8 +27,8 @@ function App() {
         guessed={guessed}
       />
       <div className="answers-and-birdinfo-wrapper">
-        <Answers categoryIndex={categoryIndex} />
-        <BirdInfo />
+        <Answers categoryIndex={categoryIndex} setCurrentAnswerIndex={setCurrentAnswerIndex} />
+        <BirdInfo currentAnswerIndex={currentAnswerIndex} categoryIndex={categoryIndex} />
       </div>
       <button type="button" className="btn btn-primary">
         Next
