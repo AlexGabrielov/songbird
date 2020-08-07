@@ -15,6 +15,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [guessed, setGuessed] = useState(false);
   const [currentAnswerIndex, setCurrentAnswerIndex] = useState(null);
+  const [scoreIncrement, setScoreIncrement] = useState(5)
 
   console.log(currentAnswerIndex);
 

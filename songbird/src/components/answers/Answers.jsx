@@ -5,7 +5,11 @@ const Answers = ({categoryIndex, setCurrentAnswerIndex}) => {
   return (
     <div className="answers-wrapper">
     <ul>
-      {birdsData[categoryIndex].map(({name}, index) => <li key={name} onClick={() => setCurrentAnswerIndex(index)}>{name}</li>)}
+      {birdsData[categoryIndex].map(({name}, index) => 
+        <li key={name} className='list-item-answer' onClick={() => setCurrentAnswerIndex(index)}>
+          <div className="list-item-button" />
+          {name}
+        </li>)}
     </ul>
     </div>
   )
