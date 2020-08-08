@@ -15,7 +15,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [guessed, setGuessed] = useState(false);
   const [currentAnswerIndex, setCurrentAnswerIndex] = useState(null);
-  const [scoreIncrement, setScoreIncrement] = useState(5)
+  const [scoreIncrement, setScoreIncrement] = useState(5);
+  const [results, setResults] = useState([null, null, null, null, null, null]);
 
   console.log(currentAnswerIndex);
 
@@ -35,10 +36,29 @@ function App() {
           setGuessed={setGuessed}
           currentBirdIndex={currentBirdIndex}
           setCurrentBirdIndex={setCurrentBirdIndex}
+          guessed={guessed}
+          setScore={setScore}
+          score={score}
+          scoreIncrement={scoreIncrement}
+          results={results}
+          setResults={setResults}
         />
         <BirdInfo currentAnswerIndex={currentAnswerIndex} categoryIndex={categoryIndex} />
       </div>
-      <button type="button" className="btn btn-primary">
+      <button
+        type="button"
+        className={`btn btn-secondary ${guessed ? 'btn-next' : ''}`}
+        onClick={() => {
+          if (guessed) {
+            setResults([null, null, null, null, null, null]);
+            setCategoryIndex(categoryIndex + 1);
+            setGuessed(false);
+            setCurrentBirdIndex(getRandomInt(6));
+            setScoreIncrement(5);
+            setCurrentAnswerIndex(null);
+          }
+        }}
+      >
         Next
       </button>
     </div>

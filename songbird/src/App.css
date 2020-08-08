@@ -73,3 +73,15 @@ ul {
 .red {
   background-color: red;
 }
+.btn {
+  width: 100%;
+}
+.btn-next {
+  background-color: #00bc8c !important;
+}
+.btn-next:hover {
+  background-color: #00efb2;
+}
+.btn:focus {
+  box-shadow: none;
+}

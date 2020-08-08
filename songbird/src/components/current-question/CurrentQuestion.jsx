@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import birdsData from '../../birds';
 import defaultBird from '../../unknown-bird.jpg';
 

@@ -1,5 +1,8 @@
 import React from 'react';
 import birdsData from '../../birds';
+import correct from '../../correct.mp3'
+import error from '../../error.mp3'
+import { useState } from 'react';
 
 const Answers = ({
   categoryIndex,
@@ -8,8 +11,13 @@ const Answers = ({
   setGuessed,
   currentBirdIndex,
   setCurrentBirdIndex,
+  guessed,
+  setScore,
+  score,
+  scoreIncrement,
+  results,
 }) => {
-  const results = [null, null, null, null, null, null];
+
   return (
     <div className="answers-wrapper">
       <ul>
@@ -19,6 +27,17 @@ const Answers = ({
             className="list-item-answer"
             onClick={() => {
               setCurrentAnswerIndex(index);
+              if (index === currentBirdIndex && !guessed) {
+                setGuessed(true);
+                new Audio(correct).play();
+                results[index] = true;
+                setScore(score + scoreIncrement);
+              } 
+              if (index !== currentBirdIndex && !guessed && results[index] !== false) {
+                new Audio(error).play();
+                results[index] = false;
+                setScoreIncrement(scoreIncrement - 1)
+              }
             }}
           >
             <div
