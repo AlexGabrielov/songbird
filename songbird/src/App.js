@@ -28,7 +28,14 @@ function App() {
         guessed={guessed}
       />
       <div className="answers-and-birdinfo-wrapper">
-        <Answers categoryIndex={categoryIndex} setCurrentAnswerIndex={setCurrentAnswerIndex} />
+        <Answers
+          categoryIndex={categoryIndex}
+          setCurrentAnswerIndex={setCurrentAnswerIndex}
+          setScoreIncrement={setScoreIncrement}
+          setGuessed={setGuessed}
+          currentBirdIndex={currentBirdIndex}
+          setCurrentBirdIndex={setCurrentBirdIndex}
+        />
         <BirdInfo currentAnswerIndex={currentAnswerIndex} categoryIndex={categoryIndex} />
       </div>
       <button type="button" className="btn btn-primary">

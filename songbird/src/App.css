@@ -57,10 +57,19 @@ img {
   width: 10px;
   height: 10px;
   display: inline-block;
-  background-color: green;
+  background-color: #555;
   border-radius: 50%;
   margin-right: 15px;
   transition: all 0.2s;
 }
-.bird-name-and-player-wrapper {
+ul {
+  padding-inline-start: 0;
+}
+/* .bird-name-and-player-wrapper {
+} */
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
 }
