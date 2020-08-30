@@ -75,9 +75,51 @@ function App() {
           </button>
         </>
       ) : perfect ? (
-        <div>perfect</div>
+        <div className="finished">
+          <h1>Поздравляем!!!</h1>
+          <p>Вы прошли викторину и набрали максимальное количество баллов!</p>
+          <p>Such wow </p>
+          <p>Many cool</p>
+          <button
+            type="button"
+            className="btn btn-secondary btn-next"
+            onClick={() => {
+              setCategoryIndex(0);
+              setCurrentBirdIndex(getRandomInt(6));
+              setScore(0);
+              setGuessed(false);
+              setCurrentAnswerIndex(null);
+              setScoreIncrement(5);
+              setResults([null, null, null, null, null, null]);
+              setFinished(false);
+              setPerfect(false);
+            }}
+          >
+            Попробовать еще раз!
+          </button>
+        </div>
       ) : (
-        <div>finish</div>
+        <div className="finished">
+          <h1>Поздравляем!</h1>
+          <p>Вы прошли викторину и набрали {score} из 30 возможных баллов</p>
+          <button
+            type="button"
+            className="btn btn-secondary btn-next"
+            onClick={() => {
+              setCategoryIndex(0);
+              setCurrentBirdIndex(getRandomInt(6));
+              setScore(0);
+              setGuessed(false);
+              setCurrentAnswerIndex(null);
+              setScoreIncrement(5);
+              setResults([null, null, null, null, null, null]);
+              setFinished(false);
+              setPerfect(false);
+            }}
+          >
+            Попробовать еще раз!
+          </button>
+        </div>
       )}
     </div>
   );

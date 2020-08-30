@@ -85,3 +85,22 @@ ul {
 .btn:focus {
   box-shadow: none;
 }
+.finished {
+  background-color: #303030;
+  padding: 69px;
+}
+.finished > h1 {
+  font-size: 4.5rem;
+  font-weight: lighter;
+  text-align: center;
+  margin: 30px;
+}
+.finished > p {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin: 30px
+}
+.finished > button {
+  padding: 15px;
+}
