@@ -25,53 +25,60 @@ function App() {
   return (
     <div className="app-container">
       <Header score={score} categoryIndex={categoryIndex} />
-
-      <CurrentQuestion
-        categoryIndex={categoryIndex}
-        currentBirdIndex={currentBirdIndex}
-        guessed={guessed}
-      />
-      <div className="answers-and-birdinfo-wrapper">
-        <Answers
-          categoryIndex={categoryIndex}
-          setCurrentAnswerIndex={setCurrentAnswerIndex}
-          setScoreIncrement={setScoreIncrement}
-          setGuessed={setGuessed}
-          currentBirdIndex={currentBirdIndex}
-          setCurrentBirdIndex={setCurrentBirdIndex}
-          guessed={guessed}
-          setScore={setScore}
-          score={score}
-          scoreIncrement={scoreIncrement}
-          results={results}
-          setResults={setResults}
-        />
-        <BirdInfo currentAnswerIndex={currentAnswerIndex} categoryIndex={categoryIndex} />
-      </div>
-      <button
-        type="button"
-        className={`btn btn-secondary ${guessed ? 'btn-next' : ''}`}
-        onClick={() => {
-          if (guessed && categoryIndex === 5) {
-            if (score === 30) {
-              setFinished(true);
-              setPerfect(true);
-            } else {
-              setFinished(true);
-            }
-          }
-          if (guessed && !finished && categoryIndex !== 5) {
-            setResults([null, null, null, null, null, null]);
-            setCategoryIndex(categoryIndex + 1);
-            setGuessed(false);
-            setCurrentBirdIndex(getRandomInt(6));
-            setScoreIncrement(5);
-            setCurrentAnswerIndex(null);
-          }
-        }}
-      >
-        Next
-      </button>
+      {!finished ? (
+        <>
+          <CurrentQuestion
+            categoryIndex={categoryIndex}
+            currentBirdIndex={currentBirdIndex}
+            guessed={guessed}
+          />
+          <div className="answers-and-birdinfo-wrapper">
+            <Answers
+              categoryIndex={categoryIndex}
+              setCurrentAnswerIndex={setCurrentAnswerIndex}
+              setScoreIncrement={setScoreIncrement}
+              setGuessed={setGuessed}
+              currentBirdIndex={currentBirdIndex}
+              setCurrentBirdIndex={setCurrentBirdIndex}
+              guessed={guessed}
+              setScore={setScore}
+              score={score}
+              scoreIncrement={scoreIncrement}
+              results={results}
+              setResults={setResults}
+            />
+            <BirdInfo currentAnswerIndex={currentAnswerIndex} categoryIndex={categoryIndex} />
+          </div>
+          <button
+            type="button"
+            className={`btn btn-secondary ${guessed ? 'btn-next' : ''}`}
+            onClick={() => {
+              if (guessed && categoryIndex === 5) {
+                if (score === 30) {
+                  setFinished(true);
+                  setPerfect(true);
+                } else {
+                  setFinished(true);
+                }
+              }
+              if (guessed && !finished && categoryIndex !== 5) {
+                setResults([null, null, null, null, null, null]);
+                setCategoryIndex(categoryIndex + 1);
+                setGuessed(false);
+                setCurrentBirdIndex(getRandomInt(6));
+                setScoreIncrement(5);
+                setCurrentAnswerIndex(null);
+              }
+            }}
+          >
+            Next
+          </button>
+        </>
+      ) : perfect ? (
+        <div>perfect</div>
+      ) : (
+        <div>finish</div>
+      )}
     </div>
   );
 }
