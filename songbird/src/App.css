@@ -23,23 +23,66 @@
 }
 .question-wrapper {
   display: flex;
+  background-color: #303030;
+  border-radius: 5px;
+  padding: 20px;
 }
 .group-name-and-player {
   display: flex;
   flex-direction: column;
-  flex: 0 0 80%;
+  /* flex: 0 0 70%; */
   padding: 10px;
-  /* width: 80%; */
+  margin-left: 30px;
+  width: 95%;
+}
+.audio-player-container {
+  border-top: 1px solid #555;
+  width: 95%;
+  padding-top: 10px;
+}
+.audio-player-container > audio {
+  width: 100%;
+}
+.audio-player-container-info {
+  position: relative;
+  top: 10px
+}
+.audio-player-container-info > audio {
+  width: 100%;
 }
 .answers-and-birdinfo-wrapper {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
 .answers-wrapper,
 .bird-info-wrapper {
   flex: 0 0 50%;
+  background-color: #303030;
+  border-radius: 5px;
+  max-width: 49%;
 }
+.answers-wrapper {
+  max-height: 300px;
+}
+.bird-info-wrapper {
+  padding: 1rem;
+  /* max-height: 300px; */
+}
+.bird-image-container-info {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  bottom: 10px;
+}
+.bird-name-and-player-wrapper {
+  display: inline-block;
+  width: calc(100% - 210px);
+  position: relative;
+  top: 20px;
+}
+
 img {
   width: 200px;
   height: 155px;
@@ -49,9 +92,10 @@ img {
 .list-item-answer {
   list-style-type: none;
   height: 50px;
-  border: 1px solid red;
   cursor: pointer;
   padding: 10px;
+  background-color: #303030;
+  border: 1px solid #555;
 }
 .list-item-button {
   width: 10px;
@@ -64,6 +108,18 @@ img {
 }
 ul {
   padding-inline-start: 0;
+}
+.bird-name-container {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.bird-name-container-info {
+  border-bottom: 1px solid #555;
+  font-size: 18px;
+}
+.bird-latin-name-container-info {
+  border-bottom: 1px solid #555;
+  position: relative;
 }
 /* .bird-name-and-player-wrapper {
 } */
