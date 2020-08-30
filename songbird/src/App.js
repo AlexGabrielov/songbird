@@ -17,12 +17,15 @@ function App() {
   const [currentAnswerIndex, setCurrentAnswerIndex] = useState(null);
   const [scoreIncrement, setScoreIncrement] = useState(5);
   const [results, setResults] = useState([null, null, null, null, null, null]);
+  const [finished, setFinished] = useState(false);
+  const [perfect, setPerfect] = useState(false);
 
-  console.log(currentAnswerIndex);
+  console.log(currentBirdIndex);
 
   return (
     <div className="app-container">
       <Header score={score} categoryIndex={categoryIndex} />
+
       <CurrentQuestion
         categoryIndex={categoryIndex}
         currentBirdIndex={currentBirdIndex}
@@ -49,7 +52,15 @@ function App() {
         type="button"
         className={`btn btn-secondary ${guessed ? 'btn-next' : ''}`}
         onClick={() => {
-          if (guessed) {
+          if (guessed && categoryIndex === 5) {
+            if (score === 30) {
+              setFinished(true);
+              setPerfect(true);
+            } else {
+              setFinished(true);
+            }
+          }
+          if (guessed && !finished && categoryIndex !== 5) {
             setResults([null, null, null, null, null, null]);
             setCategoryIndex(categoryIndex + 1);
             setGuessed(false);
