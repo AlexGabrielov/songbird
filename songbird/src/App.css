@@ -1,0 +1,223 @@
+.app-container {
+  padding: 50px 10%;
+}
+.logo {
+  background-image: url(songbird.svg);
+  width: 200px;
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.logo-and-score-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.pagination {
+  margin-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.page-item {
+  flex: auto;
+  text-align: center;
+}
+.question-wrapper {
+  display: flex;
+  background-color: #303030;
+  border-radius: 5px;
+  padding: 20px;
+}
+.group-name-and-player {
+  display: flex;
+  flex-direction: column;
+  /* flex: 0 0 70%; */
+  padding: 10px;
+  margin-left: 30px;
+  width: 95%;
+}
+.audio-player-container {
+  border-top: 1px solid #555;
+  width: 95%;
+  padding-top: 10px;
+}
+.audio-player-container > audio {
+  width: 100%;
+}
+.audio-player-container-info {
+  position: relative;
+  top: 10px;
+}
+.audio-player-container-info > audio {
+  width: 100%;
+}
+.answers-and-birdinfo-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.answers-wrapper,
+.bird-info-wrapper {
+  flex: 0 0 50%;
+  background-color: #303030;
+  border-radius: 5px;
+  max-width: 49%;
+}
+.answers-wrapper {
+  max-height: 300px;
+}
+.bird-info-wrapper {
+  padding: 1rem;
+  /* max-height: 300px; */
+}
+.bird-image-container-info {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  bottom: 10px;
+}
+.bird-name-and-player-wrapper {
+  display: inline-block;
+  width: calc(100% - 210px);
+  position: relative;
+  top: 20px;
+}
+
+img {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  margin: 0;
+}
+.list-item-answer {
+  list-style-type: none;
+  height: 50px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #303030;
+  border: 1px solid #555;
+}
+.list-item-button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #555;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: all 0.2s;
+}
+ul {
+  padding-inline-start: 0;
+}
+.bird-name-container {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.bird-name-container-info {
+  border-bottom: 1px solid #555;
+  font-size: 18px;
+}
+.bird-latin-name-container-info {
+  border-bottom: 1px solid #555;
+  position: relative;
+}
+/* .bird-name-and-player-wrapper {
+} */
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.btn {
+  width: 100%;
+}
+.btn-next {
+  background-color: #00bc8c !important;
+}
+.btn-next:hover {
+  background-color: #00efb2;
+}
+.btn:focus {
+  box-shadow: none;
+}
+.finished {
+  background-color: #303030;
+  padding: 69px 25px;
+}
+.finished > h1 {
+  font-size: 4.5rem;
+  font-weight: lighter;
+  text-align: center;
+  margin: 30px 0;
+}
+.finished > p {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+.finished > button {
+  padding: 15px;
+}
+@media (max-width: 1240px) {
+  .bird-image-container-info {
+    display: flex;
+    margin-right: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .bird-name-and-player-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+  }
+  .audio-player-container-info {
+    position: static;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 720px) {
+  .question-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .group-name-and-player {
+    padding: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .audio-player-container {
+    border-top: 1px solid #555;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .answers-wrapper,
+  .bird-info-wrapper {
+    max-width: 100%;
+  }
+  .bird-info-wrapper {
+    margin-top: 20px;
+  }
+  .answers-and-birdinfo-wrapper {
+    flex-direction: column;
+  }
+  .finished > h1 {
+    font-size: 3.5rem;
+  }
+  .finished > p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .finished > h1 {
+    font-size: 2rem;
+  }
+  .finished > p {
+    font-size: 1rem;
+  }
+}
