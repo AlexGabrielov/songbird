@@ -78,8 +78,8 @@ function App() {
         <div className="finished">
           <h1>Поздравляем!!!</h1>
           <p>Вы прошли викторину и набрали максимальное количество баллов!</p>
-          <p>Such wow </p>
-          <p>Many cool</p>
+          <p>Such wow!</p>
+          <p>Many cool!</p>
           <button
             type="button"
             className="btn btn-secondary btn-next"

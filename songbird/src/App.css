@@ -87,20 +87,36 @@ ul {
 }
 .finished {
   background-color: #303030;
-  padding: 69px;
+  padding: 69px 25px;
 }
 .finished > h1 {
   font-size: 4.5rem;
   font-weight: lighter;
   text-align: center;
-  margin: 30px;
+  margin: 30px 0;
 }
 .finished > p {
   text-align: center;
   font-weight: lighter;
   font-size: 1.5rem;
-  margin: 30px
+  margin: 15px 0;
 }
 .finished > button {
   padding: 15px;
+}
+@media (max-width: 720px) {
+  .finished > h1 {
+    font-size: 3.5rem;
+  }
+  .finished > p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 520px) {
+  .finished > h1 {
+    font-size: 2rem;
+  }
+  .finished > p {
+    font-size: 1rem;
+  }
 }
