@@ -45,7 +45,7 @@
 }
 .audio-player-container-info {
   position: relative;
-  top: 10px
+  top: 10px;
 }
 .audio-player-container-info > audio {
   width: 100%;
@@ -160,7 +160,51 @@ ul {
 .finished > button {
   padding: 15px;
 }
+@media (max-width: 1240px) {
+  .bird-image-container-info {
+    display: flex;
+    margin-right: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .bird-name-and-player-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+  }
+  .audio-player-container-info {
+    position: static;
+    margin-top: 10px;
+  }
+}
 @media (max-width: 720px) {
+  .question-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .group-name-and-player {
+    padding: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+  .audio-player-container {
+    border-top: 1px solid #555;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .answers-wrapper,
+  .bird-info-wrapper {
+    max-width: 100%;
+  }
+  .bird-info-wrapper {
+    margin-top: 20px;
+  }
+  .answers-and-birdinfo-wrapper {
+    flex-direction: column;
+  }
   .finished > h1 {
     font-size: 3.5rem;
   }
@@ -168,6 +212,7 @@ ul {
     font-size: 1.25rem;
   }
 }
+
 @media (max-width: 520px) {
   .finished > h1 {
     font-size: 2rem;
